@@ -1,0 +1,13 @@
+## Objective
+To discover active hosts and services on the local network
+
+## Command Used
+nmap -sS -sV 192.168.0.0/24
+
+## Key Findings
+- Multiple active hosts detected
+- Open ports identified (e.g., 80, 443)
+- Services running on discovered devices
+
+  ## Security Insight
+  Open ports expose services that can be targeted for exploitation if not properly secured
