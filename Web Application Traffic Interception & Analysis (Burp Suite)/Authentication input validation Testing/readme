@@ -1,0 +1,26 @@
+## Authentication Input Validation Testing
+
+### Objective
+Assess how the login endpoint handles malformed or unexpected user input.
+
+### Tool Used
+- Burp Suite Community Edition
+- OWASP Juice Shop
+
+### Method
+Captured the login request and resent modified inputs through Burp Repeater, including:
+- empty credentials
+- invalid email format
+- oversized input values
+
+### Observation
+The endpoint responses were reviewed to understand how input validation and error handling were implemented.
+
+### Security Insight
+Authentication endpoints should reject malformed input consistently and avoid verbose error messages that may aid attackers.
+
+### Skills Demonstrated
+- HTTP request interception
+- Request modification in Repeater
+- Authentication flow analysis
+- Input validation assessment
