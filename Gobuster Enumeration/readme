@@ -1,0 +1,23 @@
+## Directory Enumeration (Gobuster)
+
+### Objective
+Discover hidden directories and endpoints on a web application.
+
+### Tool Used
+- Gobuster
+
+### Command Used
+gobuster dir -u http://localhost:3000 -w common.txt
+
+### Findings
+- Identified multiple endpoints such as /assets and /rest
+- Some endpoints returned restricted access (403)
+- Demonstrates presence of hidden server-side routes
+
+### Security Insight
+Hidden endpoints may expose sensitive functionality if not properly secured.
+
+### Skills Demonstrated
+- Directory enumeration
+- Endpoint discovery
+- Web attack surface mappin
