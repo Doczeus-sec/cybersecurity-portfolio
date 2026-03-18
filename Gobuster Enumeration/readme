@@ -1,23 +1,30 @@
-## Directory Enumeration (Gobuster)
+##  Directory Enumeration (Gobuster)
 
-### Objective
-Discover hidden directories and endpoints on a web application.
+### Objective  
+To discover hidden directories and API endpoints on a web application.
 
-### Tool Used
+### Tool Used  
 - Gobuster
 
-### Command Used
-gobuster dir -u http://localhost:3000 -w common.txt
+### Command Used  
+gobuster dir -u http://localhost:3000 -w common.txt --exclude-length 75002
 
-### Findings
-- Identified multiple endpoints such as /assets and /rest
-- Some endpoints returned restricted access (403)
-- Demonstrates presence of hidden server-side routes
+### Key Findings  
+- Discovered multiple endpoints including:
+  - /assets
+  - /rest
+  - /api
+  - /robots.txt
+  - /.well-known/security.txt  
 
-### Security Insight
-Hidden endpoints may expose sensitive functionality if not properly secured.
+- Some endpoints returned **500 Internal Server Error**, indicating backend processing issues.
 
-### Skills Demonstrated
-- Directory enumeration
-- Endpoint discovery
-- Web attack surface mappin
+### Security Insight  
+- Hidden endpoints increase the attack surface  
+- API routes (/rest, /api) are critical and often targeted  
+- 500 errors may reveal backend weaknesses  
+
+### Skills Demonstrated  
+- Directory enumeration  
+- Handling false positives (response filtering)  
+- Identifying high-value endpoints  
